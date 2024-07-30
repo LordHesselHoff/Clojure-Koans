@@ -35,11 +35,11 @@
   "But watch out if you try to pop nothing"
   (= "No dice!" (try
           (pop '())
-          (catch IllegalStateException e
+          (catch IllegalStateException _
             "No dice!")))
 
   "The rest of nothing isn't so strict"
   (= () (try
           (rest '())
-          (catch IllegalStateException e
+          (catch IllegalStateException _
             "No dice!"))))
